@@ -36,11 +36,18 @@ public class PeopleListActivity extends AppCompatActivity {
     private List<Map<String, String>> list;
     private LinearLayoutManager linearLayoutManager;
     MyListAdapter adapter;
-
+    private ImageButton imageButton3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_people_list);
+        imageButton3 = findViewById(R.id.imageButton3);
+        imageButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finnish();
+            }
+        });
         sp = (Spinner)findViewById(R.id.spinner);
         //sp.setOnItemClickListener(this);
         //ArrayAdapter<String> ada=new ArrayAdapter<String>(this,R.activity_company_certificate,StringArray);

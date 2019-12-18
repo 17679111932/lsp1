@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         im3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainActivity.this, PeopleListActivity.class);
+                startActivity(intent);
             }
         });
         //我的、登录
@@ -50,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isLogin){
-
+                    Intent intent = new Intent(MainActivity.this, MyInfoActivity.class);
+                    startActivity(intent);
                 }else{
                     Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);
